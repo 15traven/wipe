@@ -8,19 +8,16 @@
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Analyzing_Title"
-            Style="{StaticResource PageTitleStyle}" />
-
-        <Grid Grid.Row="1">
-            
-        </Grid>
-        
+        <StackPanel 
+            Orientation="Vertical" 
+            VerticalAlignment="Center" 
+            Spacing="24">
+            <ProgressRing IsActive="True" Width="50" Height="50"/>
+            <TextBlock
+                Text="Analyzing temp files..."
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="18"/>
+        </StackPanel>
     </Grid>
 </Page>

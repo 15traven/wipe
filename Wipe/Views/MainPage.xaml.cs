@@ -22,10 +22,10 @@ public sealed partial class MainPage : Page
     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
         base.OnNavigatedTo(e);
-        DisplaySizes((long)e.Parameter);
+        DisplayFilesSize((long)e.Parameter);
     }
 
-    private void DisplaySizes(long filesSize)
+    private void DisplayFilesSize(long filesSize)
     {
         string[] sizes = { "B", "KB", "MB", "GB" };
         var order = 0;

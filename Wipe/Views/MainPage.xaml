@@ -8,19 +8,25 @@
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
-
-        <Grid Grid.Row="1">
-            
-        </Grid>
-        
+        <StackPanel 
+            Orientation="Vertical"
+            VerticalAlignment="Center"
+            Spacing="24">
+            <TextBlock
+                Text="Total temp files size"
+                HorizontalAlignment="Center"
+                FontSize="20"/>
+            <TextBlock 
+                x:Name="FilesSizeText"
+                HorizontalAlignment="Center"
+                FontSize="64"
+                FontWeight="SemiBold"/>
+            <Button 
+                Style="{StaticResource AccentButtonStyle}" 
+                HorizontalAlignment="Center"
+                Content="Clean"
+                FontSize="18"
+                Width="300"/>
+        </StackPanel>
     </Grid>
 </Page>

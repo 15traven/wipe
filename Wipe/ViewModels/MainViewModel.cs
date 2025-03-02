@@ -1,26 +1,14 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Windows.UI.StartScreen;
 using Wipe.Contracts.ViewModels;
 
 namespace Wipe.ViewModels;
 
-public partial class MainViewModel : ObservableRecipient, INavigationAware
+public partial class MainViewModel : ObservableRecipient
 {
-    public long FilesSize
-    {
-        get; private set;
-    }
-
     public MainViewModel()
     {
+        
     }
-
-    public void OnNavigatedTo(object parameter)
-    {
-        if (parameter is long filesSize)
-        {
-            FilesSize = filesSize;
-        }
-    }
-
-    public void OnNavigatedFrom() => throw new NotImplementedException();
 }

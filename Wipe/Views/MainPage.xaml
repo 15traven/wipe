@@ -11,16 +11,18 @@
         <StackPanel 
             Orientation="Vertical"
             VerticalAlignment="Center"
-            Spacing="24">
-            <TextBlock
+            Spacing="36">
+            <StackPanel>
+                <TextBlock
                 Text="Total temp files size"
                 HorizontalAlignment="Center"
                 FontSize="20"/>
-            <TextBlock 
-                x:Name="FilesSizeText"
-                HorizontalAlignment="Center"
-                FontSize="64"
-                FontWeight="SemiBold"/>
+                <TextBlock 
+                    x:Name="FilesSizeText"
+                    HorizontalAlignment="Center"
+                    FontSize="64"
+                    FontWeight="SemiBold"/>
+            </StackPanel>
             <Button 
                 Style="{StaticResource AccentButtonStyle}" 
                 HorizontalAlignment="Center"
